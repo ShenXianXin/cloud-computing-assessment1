@@ -1,4 +1,49 @@
-<h1>no-name-yet BBS</h1>
+{% extends "layout.html" %}
 
-<p>This project aims to build a light-weight social media platform that allows users to log in and share content among
-    each other.</p>
+{% block page_title %}Home{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    {# title and intro #}
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-8">
+            <h1>no-name-yet Forum</h1>
+            <p>Introduction:</p>
+            <p>This project aims to build a light-weight social media platform that allows users to log in and share content among each other.</p>
+        </div>
+        <div class="col"></div>
+    </div>
+    {# tool bar #}
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-8 d-flex flex-row-reverse">
+            <button class="btn btn-primary" type="button" onclick="window.location='{{ url_for('create_post') }}'">Create post</button>
+        </div>
+        <div class="col"></div>
+    </div>
+    {# table #}
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-8">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Poster</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>need to list this by for loop</td>
+                    <td>xianxin shen</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+{% endblock %}

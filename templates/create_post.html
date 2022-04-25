@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Create post{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    {# title and intro #}
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-8">
+            <h1>Create post</h1>
+        </div>
+        <div class="col"></div>
+    </div>
+    {# form #}
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-8">
+            <form id="createPostForm" class="form" method="POST" action="" role="form">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input class="form-control" id="title" placeholder="Please input your topic here.">
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label">Content</label>
+                    <textarea class="form-control" id="content" rows="10"></textarea>
+                </div>
+                <div class="mb-3 d-flex flex-row-reverse">
+                    <button type="submit" class="btn btn-primary ms-3">Post</button>
+                    <button type="button" class="btn btn-link ms-3" onclick="window.location='{{ url_for('home') }}'">Cancel</button>
+                </div>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+{% endblock %}
