@@ -1,7 +1,5 @@
 """ database """
 
-from urllib import response
-from boto3.dynamodb.conditions import Attr
 import json
 import boto3
 
@@ -74,6 +72,21 @@ def get_posts(dynamodb=None):
 
     table = dynamodb.Table("Posts")
 
-    response = table.scan(FilterExpression=Attr("details.tags").contains("aws"))
+    response = table.scan()
     items = response["Items"]
     return items
+
+
+def put_post(title, text, dynamodb=None):
+
+    if not dynamodb:
+        dynamodb = _get_service_resource()
+
+    table = dynamodb.Table("Posts")
+
+    try:
+        table.put_item(
+            Item={"user": "xianxin shen", "title": title, "details": {"text": text}}
+        )
+    except Exception as e:
+        print(e)

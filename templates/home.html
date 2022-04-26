@@ -37,8 +37,15 @@
                 <tbody>
                   {% for post in posts %}
                     <tr>
-                      <td>{{ post.title }}</td>
-                      <td>{{ post.user }}</td>
+                      <td>
+                        {{ post.title }}<br>
+                        {{ post.details.tags }}<br>
+                        {{ post.details.text }}
+                      </td>
+                      <td>
+                        {{ post.user }}<br>
+                        {{ post.details.date }}
+                      </td>
                     </tr>
                   {% endfor %}
                 </tbody>
