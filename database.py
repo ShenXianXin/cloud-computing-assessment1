@@ -1,5 +1,6 @@
 """ database """
 
+from cmath import e
 import json
 import boto3
 
@@ -15,10 +16,8 @@ def init_table(dynamodb=None):
         dynamodb = _get_service_resource()
 
     # check if table exists
-    dynamodb_client = dynamodb.meta.client
     table_name = "Posts"
-    existing_tables = dynamodb_client.list_tables()["TableNames"]
-    if table_name not in existing_tables:
+    try:
         table = dynamodb.create_table(
             TableName=table_name,
             KeySchema=[
@@ -32,8 +31,8 @@ def init_table(dynamodb=None):
             ProvisionedThroughput={"ReadCapacityUnits": 10, "WriteCapacityUnits": 10},
         )
         print("Table status:", table.table_status)
-    else:
-        print("Table exist. Skip table creating process.")
+    except Exception as e:
+        print("Table exist. Skip table creating process.", e)
 
     # load sample posts
     load_posts(dynamodb)
