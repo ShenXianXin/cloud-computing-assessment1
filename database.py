@@ -5,7 +5,7 @@ import boto3
 
 
 def _get_service_resource():
-    dynamodb = boto3.resource("dynamodb", endpoint_url="http://localhost:8000")
+    dynamodb = boto3.resource("dynamodb", endpoint_url="dynamodb")
     return dynamodb
 
 
