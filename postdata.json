@@ -1,0 +1,62 @@
+[
+    {
+        "user": "xianxin shen",
+        "title": "sample post title 1",
+        "details": {
+            "date": "2022-04-26T23:30:11Z",
+            "tags": [
+                "aws",
+                "dynamodb"
+            ],
+            "text": "I am trying to put this post to AWS DynamoDB."
+        }
+    },
+    {
+        "user": "xianxin shen",
+        "title": "sample post title 2",
+        "details": {
+            "date": "2022-04-26T23:33:21Z",
+            "tags": [
+                "python",
+                "flask"
+            ],
+            "text": "The web is based on python framework, flask."
+        }
+    },
+    {
+        "user": "xianxin shen",
+        "title": "sample post title 3",
+        "details": {
+            "date": "2022-04-27T01:21:21Z",
+            "tags": [
+                "flask",
+                "bootstrap"
+            ],
+            "text": "Bootstrap is imported to this flask project."
+        }
+    },
+    {
+        "user": "biu biu",
+        "title": "sample post title 1",
+        "details": {
+            "date": "2022-04-27T01:27:21Z",
+            "tags": [
+                "dotnet",
+                "bootstrap"
+            ],
+            "text": "Can .NET use bootstrap too?"
+        }
+    },
+    {
+        "user": "biu biu",
+        "title": "sample post title 2",
+        "details": {
+            "date": "2022-04-27T01:27:40Z",
+            "tags": [
+                "aws",
+                "rds"
+            ],
+            "text": "I like to use SQL in relational database!"
+        }
+    }
+]

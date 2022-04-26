@@ -35,10 +35,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>need to list this by for loop</td>
-                    <td>xianxin shen</td>
-                  </tr>
+                  {% for post in posts %}
+                    <tr>
+                      <td>{{ post.title }}</td>
+                      <td>{{ post.user }}</td>
+                    </tr>
+                  {% endfor %}
                 </tbody>
               </table>
         </div>
